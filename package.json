@@ -2,6 +2,7 @@
   "name": "my-app",
   "private": true,
   "version": "1.0.0",
+  "homepage": "https://vrailevoid.github.io/",
   "description": "My App",
   "repository": "",
   "license": "UNLICENSED",
@@ -35,7 +36,7 @@
     "build-dev": "cross-env NODE_ENV=development node ./build/build.js",
     "build-prod": "cross-env NODE_ENV=production node ./build/build.js",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./build/webpack.config.js",
-    "start": "npm run dev",
+    "start": "npm start",
     "postinstall": "cpy './node_modules/framework7-icons/fonts/*.*' './src/fonts/'"
   },
   "browserslist": [
