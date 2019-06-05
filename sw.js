@@ -6,7 +6,7 @@ self.addEventListener('install', function(event) {
           '/highscore.html',
           '/styles.css',
           '/script.js',
-          '/src/js/app.js',
+          '/app.js',
           '/manifest.json',
           '/bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css',
           '/bootstrap/bootstrap-4.3.1-dist/js/bootstrap.min.js'
