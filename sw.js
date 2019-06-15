@@ -4,12 +4,23 @@ self.addEventListener('install', function(event) {
       return cache.addAll([
           '/index.html',
           '/highscore.html',
-          '/styles.css',
-          '/script.js',
-          '/app.js',
+          '/offline.html',
+          '/src/js/app.js',
           '/manifest.json',
-          '/bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css',
-          '/bootstrap/bootstrap-4.3.1-dist/js/bootstrap.min.js'
+          '/src/images/paper-btn.png',
+          '/src/images/paper.png',
+          '/src/images/rock-btn.png',
+          '/src/images/rock.png',
+          '/src/images/scissor-btn.png',
+          '/src/images/scissor.png',
+          '/src/images/icons-192.jpg',
+          '/src/images/icons-512.png',
+          '/src/images/bg.png',
+          '/favicon.ico',
+          'https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css',
+          'https://code.jquery.com/jquery-1.11.1.min.js',
+          'https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js'
+          
         // etc
       ]);
     })
@@ -22,6 +33,12 @@ self.addEventListener('fetch', function(event) {
     caches.match(event.request).then(function(response) {
       // Fall back to network
       return response || fetch(event.request);
+    }).catch(function() {
+      // If both fail, show a generic fallback:
+      return caches.match('/offline.html');
+      // However, in reality you'd have many different
+      // fallbacks, depending on URL & headers.
+      // Eg, a fallback silhouette image for avatars.
     })
   );
 });
