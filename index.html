@@ -160,19 +160,19 @@
 
 <body onload="load()">
 
-<div data-role="page">
+<div data-role="page" data-theme="b">
 
 	<div data-role="header">
 			<div data-role="navbar">
 			    <ul>
-			        <li><a href="index.html" class="ui-btn-active" rel="external">Home</a></li>
-			        <li><a href="highscore.html" rel="external">Highscore</a></li>
+			        <li><a href="index.html" class="ui-btn-active" rel="external" data-icon="home">Home</a></li>
+			        <li><a href="highscore.html" rel="external" data-icon="bars">Highscore</a></li>
 			    </ul>
 			</div>
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
-				<h1 class="title">Black Jack</h1>
+				<h1 class="title"><font face="impact">Black Jack</font></h1>
 				<div class="container" id="nickname_form">
 					<input type="text" id="nick" placeholder="nickname">
 					<div class="ui-grid-solo">
@@ -183,7 +183,7 @@
 					<div class="ui-grid-solo">
 						
 						<div class="ui-block-a">
-							<h1>Dealer's Hand - <span id="bot-score"></h1>
+							<h1><font face="impact">Dealer's Hand - <span id="bot-score"></span></font></h1>
 						</div>
 						
 						<div class="ui-grid-d">
@@ -206,7 +206,7 @@
 						<br>
 						<br>
 						<div class="ui-block-a">
-							<h1>Your Hand - <span id="player-score"></span><span id="winlose"></span></h1>
+							<h1><font face="impact">Your Hand - <span id="player-score"></span><span id="winlose"></span></font></h1>
 						</div>
 						<div class="ui-grid-d">
 							<div class="images ui-block-a">
@@ -233,8 +233,8 @@
 						</div>
 						<div class="ui-block-a">Total Score : <span id="total-score"></span></div>
 						<div class="ui-grid-a">
-							<div class="ui-block-a"><button type="button" class="btn btn-primary" id="start">Play Again</button></div>
-							<div class="ui-block-b"><button type="button" class="btn btn-primary" id="stop">Stop Playing</button></div>
+							<div class="ui-block-a"><button type="button" class="btn btn-primary" id="start" data-icon="refresh">Play Again</button></div>
+							<div class="ui-block-b"><button type="button" class="btn btn-primary" id="stop" data-icon="forbidden">Stop Playing</button></div>
 						</div>
 					</div>
 				</div>
