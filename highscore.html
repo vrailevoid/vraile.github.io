@@ -16,7 +16,9 @@
 	<script src="/src/js/app.js"></script>
 
 	<style>
-
+		.ui-table-columntoggle-btn {
+		    display: none !important;
+		}
 	</style>
 </head>
 <body onload="load()">
@@ -32,7 +34,7 @@
 
 		<div role="main" class="ui-content">
 			<h1 style="text-align: center"><font face="impact">High Score</font></h1>
-			<table data-role="table" class="ui-responsive table-stroke">
+			<table data-role="table" id="table-column-toggle" data-mode="columntoggle" class="ui-responsive table-stroke">
 				<thead>
 					<tr>
 						<th>Rank</th>
